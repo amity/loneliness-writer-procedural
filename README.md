@@ -1,5 +1,5 @@
 # Java-Built Writer bot for Loneliness Writer
-## Module handling program structure:
+## Program structure:
 ### Classes:
 * “Student” class
     - Prop: Name (class: string)
