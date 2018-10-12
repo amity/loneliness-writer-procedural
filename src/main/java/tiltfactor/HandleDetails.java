@@ -1,10 +1,10 @@
 package tiltfactor;
 
 /**
- * Hello world!
+ * Handles adding new information!
  */
-public final class App {
-    private App() {
+public final class HandleDetails {
+    private HandleDetails() {
     }
 
     /**
@@ -13,8 +13,6 @@ public final class App {
      * @param args The arguments of the program.
      */
     public static void main(String[] args) {
-        System.out.println("xd World!");
-        System.out.println(args[0]);
-
+        System.out.println("test2");
     }
 }

@@ -7,17 +7,13 @@
 ### Classes:
 
 -   **Writer** class
-    -   **Name** (class: string)
-    -   **Partner** This will also be of the Writer class, and how to access information about the partner.
-    -   **Birthday** (class: Date) (when generating letter, if birthday is soon/recent, include a birthday message in the letter)
-    -   **Family** (class: Family)
-    -   Props: **Details** (Map of details. Includes hobbies, favorite \_\_\_\_s, Halloween costume plans, et cetera. Needs to be updated regularly.)
-    -   Prop: **Address.** Null for student, stores the mailing address as a string for writing partner.
--   **Family** class
-    -   Prop: Mother (class: string -- name or null)
-    -   Prop: Father (class: string -- name or null)
-    -   Prop: Older sibling (class: string -- name or null)
-    -   Prop: Younger sibling (class: string -- name or null)
+    -   **Name**, _String_
+    -   **Partner**, _Writer_: This will also be of the Writer class, and how to access information about the partner.
+    -   **Birthday**, _Date_: (when generating letter, if birthday is soon/recent, include a birthday message in the letter)
+    -   **Family**, _Family_
+    -   **Address**, _String_: Null for student, stores the mailing address as a string for writing partner.
+    -   **Details**, _Map<String, String>_: Map of details. Includes hobbies, favorite \_\_\_\_s, Halloween costume plans, et cetera. Needs to be updated regularly.
+    -   **UnusedDetails**, _Array<String>_: All the keys of details that haven't been used yet. To generate new text, you can take a random key from this array, get its item from the map and generate a sentence, and then remove the key.
 
 ### Data Structures:
 
