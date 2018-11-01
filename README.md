@@ -1,6 +1,11 @@
 # Java-Built Writer bot for Loneliness Writer
 
-##
+## Running
+
+Compile with `mvn package`.
+
+Run with
+`java -cp target/java-writer-1.0-SNAPSHOT.jar tiltfactor.App`
 
 ## Program structure:
 
@@ -13,13 +18,11 @@
     -   **Family**, _Family_
     -   **Address**, _String_: Null for student, stores the mailing address as a string for writing partner.
     -   **Details**, _Map<String, String>_: Map of details. Includes hobbies, favorite \_\_\_\_s, Halloween costume plans, et cetera. Needs to be updated regularly.
-    -   **UnusedDetails**, _Array<String>_: All the keys of details that haven't been used yet. To generate new text, you can take a random key from this array, get its item from the map and generate a sentence, and then remove the key.
+    -   **UnusedDetails**, _ArrayList<String>_: All the keys of details that haven't been used yet. To generate new text, you can take a random key from this array, get its item from the map and generate a sentence, and then remove the key.
 
 ### Data Structures:
 
--   Collection of Students (Array? Set?). Needs to be accessible externally for regular im/export.
--   Collection of Students (Array? Set?). Needs to be in stored externally for regular im/export.
--   Produced letter (string).
+-   Collection of Students (HashMap<String name, Writer>). Needs to be accessible externally for regular im/export.
 
 ### I/O:
 
@@ -32,3 +35,16 @@
 In addition to the primary program that generates letters, there needs to be a way to upload information about partners.
 
 Structuring Idea: Have various folders that have the needed data saved inside. Then just run the command and it automatically generates? And can compare the letter to past letters from the student to ensure there’s no repetition (I have a program written for this).
+
+The UNited SDtates federal govenrment sjould
+
+## Functions
+
+-   Initial import (not really a function in final product)
+-   Export out all current data (What specifically?)
+-   Import in all writer data (Should just be the HashMap of writer data?)
+-   Given student + date, generate a letter
+    -   If birthday or holiday coming up, add special content
+    -   Function to be run repeatedly -- returns one specific sentence for the writer's sentence, and updates unusedDetails
+        -   Takes input of Topic and Writer's variable, and returns a string based on a switch case (switch on Topic, and plugging in variable)
+-   Given student + letter from partner, query the dialogflow webhook. also modify the student's unusedDetails, if relevant.

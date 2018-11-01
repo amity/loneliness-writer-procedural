@@ -6,6 +6,7 @@ import java.util.Date;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.util.HashMap;
+import java.util.Random;
 
 public class Writer implements Serializable {
 	public String name;
@@ -23,6 +24,7 @@ public class Writer implements Serializable {
 		details = new HashMap<String, String>();
 		details.put("book", "The Mysterious Benedict Society");
 		details.put("movie", "Spider-Man");
+		details.put("catch", "fish");
 		address = "2892 Hinman";
 		unusedDetails = new ArrayList<String>();
 		unusedDetails.addAll(details.keySet());
@@ -39,6 +41,25 @@ public class Writer implements Serializable {
 		address = "2892 Hinman";
 		unusedDetails = new ArrayList<String>();
 		unusedDetails.addAll(details.keySet());
+	}
+
+	public String generateSentence() {
+		String sentence = "";
+		String topic = unusedDetails.remove(new Random().nextInt(unusedDetails.size()));
+		switch (topic) {
+		case "book":
+			sentence = String.format("My favorite book is %s . I like it so much I keep reading it!",
+					details.get(topic));
+
+		case "movie":
+			sentence = String.format("My favorite movie is %s . It's a really cool movie.", details.get(topic));
+
+		case "hobby":
+			sentence = String.format("When I have free time, I like to %s !", details.get(topic));
+
+		}
+
+		return sentence;
 	}
 
 	public String getName() {

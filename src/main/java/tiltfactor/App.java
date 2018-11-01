@@ -19,7 +19,7 @@ public final class App {
 	 */
 
 	public static void main(String[] args) {
-		System.out.println("xd World!");
+		System.out.println("hello new World!");
 		Writer myWriter = new Writer();
 		// FileOutputStream fos;
 		// ObjectOutputStream oos;
@@ -29,10 +29,9 @@ public final class App {
 		// oos.writeObject(myWriter);
 		// oos.close();
 		// } catch (FileNotFoundException e) {
-		// // TODO Auto-generated catch block
+		// System.out.println("Error: File not found.");
 		// e.printStackTrace();
 		// } catch (IOException e) {
-		// // TODO Auto-generated catch block
 		// e.printStackTrace();
 		// }
 		// FileInputStream fis;
@@ -54,5 +53,6 @@ public final class App {
 		// // TODO Auto-generated catch block
 		// e.printStackTrace();
 		// }
+		System.out.println(myWriter.generateSentence());
 	}
 }
