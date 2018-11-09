@@ -3,6 +3,7 @@ package tiltfactor;
 /**
  * Handles adding new information!
  */
+
 public final class HandleDetails {
     private HandleDetails() {
     }
