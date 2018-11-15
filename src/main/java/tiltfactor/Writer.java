@@ -66,73 +66,84 @@ public class Writer implements Serializable {
 		case "favorite-book":
 			sentence = String.format("My favorite book is %s . I like it so much I keep reading it!",
 					details.get(topic));
+			break;
 
 		case "favorite-movie":
 			sentence = String.format("My favorite movie is %s . It's a really cool movie.", details.get(topic));
+			break;
 
 		case "games":
 			sentence = String.format("When I have free time, I like %s !", details.get(topic));
+			break;
 
 		case "athletics":
 			sentence = String.format(
 					"My mom always tells me it's really important to keep active. While I do like to just hang out sometimes, I also like %s !",
 					details.get(topic));
+			break;
 
 		case "interest":
 			sentence = String.format("One cool thing I've been doing recently is %s . I think it's super fun!",
 					details.get(topic));
+			break;
 
 		case "dislike-food":
 			sentence = String.format(
 					"Are there any foods you dislike? I try not to be a picky eater, but I just can't stand %s !",
 					details.get(topic));
+			break;
 
 		case "dislike-activity":
 			sentence = String.format("I really don't like %s !", details.get(topic));
+			break;
 
 		case "favorite-food":
 			sentence = String.format(
-					"On my birthday, I always get to eat %s ! I think it's my favorite food. Do you have a favorite food?",
+					"On my birthday, I always get to eat %s! I think it's my favorite food. Do you have a favorite food?",
 					details.get(topic));
+			break;
 
 		case "favorite-dessert":
 			sentence = String.format("My favorite dessert is %s ! Do you have a special dessert you like?",
 					details.get(topic));
+			break;
 
 		case "misc-1":
 			sentence = details.get(topic);
+			break;
 
 		case "misc-2":
 			sentence = details.get(topic);
-
+			break;
 		case "misc-3":
 			sentence = details.get(topic);
-
+			break;
 		case "future-goals":
 			sentence = details.get(topic);
-
+			break;
 		case "favorite-color":
 			sentence = String.format("What's your favorite color? My favorite color is %s !", details.get(topic));
-
+			break;
 		case "halloween-costume":
 			sentence = String.format(
 					"Did you do anything fun for Halloween? I dressed up as %s and went trick-or-treating!",
 					details.get(topic));
-
+			break;
 		case "favorite-animal":
 			sentence = String.format(
 					"My favorite animals are %s ! I wish I had one as a pet. What's your favorite animal?",
 					details.get(topic));
-
-		case "fave-class":
-			sentence = String.format(
-					"Did you have a favorite class in school? My favorite class is %s class. I think it's really interesting.",
-					details.get(topic));
-
+			break;
 		case "dislike-class":
 			sentence = String.format(
 					"I really don't like %s class! I just can't stand it, it's so boring to me. Did you have any classes you disliked when you were in school?",
 					details.get(topic));
+			break;
+		case "fave-class":
+			sentence = String.format(
+					"Did you have a favorite class in school? My favorite class is %s class. I think it's really interesting.",
+					details.get(topic));
+			break;
 		}
 		return sentence;
 	}
