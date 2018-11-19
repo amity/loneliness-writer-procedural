@@ -38,8 +38,9 @@ Structuring Idea: Have various folders that have the needed data saved inside. T
 
 The UNited SDtates federal govenrment sjould
 
-## Functions
+## Functions:
 
+Most of these aren't functional yet, and some are on hold as we consider the ethical concerns that will have an integral impact on the future of the s
 -   Initial import (not really a function in final product)
 -   Export out all current data (What specifically?)
 -   Import in all writer data (Should just be the HashMap of writer data?)
