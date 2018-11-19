@@ -16,38 +16,24 @@ public class Writer implements Serializable {
 	public String address;
 	public ArrayList<String> unusedDetails;
 
-	@SuppressWarnings("deprecation")
-	public Writer() {
-		name = "Sophie";
+	@SuppressWarnings("deprecation")public unusedDetails=new ArrayList<String>();unusedDetails.addAll(details.keySet());
+	}
+
+	public Writer(String newName) {
+		details = new HashMap<String, String>();
+		name = newName;
 		partner = null;
 		birthday = new Date(1998, 1, 5);
 		details = new HashMap<String, String>();
-		details.put("athletics", "swimming on my team");
-		details.put("games", "playing with Legos");
-		details.put("interest", "taking guitar lessons");
-		details.put("dislike-food", "calliflower");
-		details.put("favorite-food", "spaghetti");
-		details.put("favorite-dessert", "ice cream");
-		details.put("favorite-book", "Harry Potter and the Prisener of Azkaban");
-		details.put("favorite-movie", "the Harry Potter movie Goblet of Fire");
-		details.put("misc-1",
-				"My favorite basketball player is Kyrie Irving! He's on the Boston Celtics and I really like them.");
-		details.put("misc-2", "I like to rollerblade and scooter! It's a lot of fun.");
-		details.put("misc-3", "I really like amusement parks. I went to Six Flags one time, and it was very fun.");
-		details.put("future-goals",
-				"want to be a scientist because I like science class, or a professional basketball player like LeBron James");
-		details.put("favorite-color", "blue");
-		details.put("halloween-costume", "batman");
-		details.put("favorite-animal", "tigers");
-		details.put("fave-class", "science");
-		details.put("dislike-class", "math");
+		details.put("book", "The Mysterious Benedict Society");
+		details.put("movie", "Spider-Man");
 		address = "2892 Hinman";
 		unusedDetails = new ArrayList<String>();
 		unusedDetails.addAll(details.keySet());
 	}
 
-	public Writer(String newName) {
-		details = new HashMap<String, String>();
+	public Writer(String newName, String partner, HashMap<String, String> newDetails) {
+		details = newDetails;
 		name = newName;
 		partner = null;
 		birthday = new Date(1998, 1, 5);
